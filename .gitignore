@@ -1,0 +1,46 @@
+# ====== HEMLIGHETER OCH MILJÖVARIABLER ======
+.env
+.env.*
+token.pickle
+client_secret.json
+credentials.json
+
+# ====== DATABASER OCH TILLFÄLLIGA FILER ======
+jeeves_memory.db
+jeeves_memory.db-journal
+*.sqlite3
+/tmp/
+
+# ====== PYTHON & MASKININLÄRNING ======
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+.venv/
+env/
+venv/
+ENV/
+
+# ====== VERCEL OCH MOLN ======
+.vercel
+.vercelignore
+
+# ====== FRONTEND (NODE/SVELTE) ======
+node_modules/
+frontend/node_modules/
+.npm/
+.eslintcache
+.vite/
+frontend/dist/
+frontend/.svelte-kit/
+frontend/build/
+
+# ====== OPERATIVSYSTEM ======
+.DS_Store
+Thumbs.db

@@ -1,0 +1,79 @@
+=== JEEVES AGENT TEST SUITE (ALFA) ===
+
+--- Scenario 1: Stress 2 ---
+Input: Jag känner mig faktiskt ganska pigg idag, vad ska vi göra?
+Jeeves (Task Mgr): Fantastiskt att höra att du känner dig pigg idag! Det är en underbar resurs att rida på. Låt oss kanalisera den energin in i något meningsfullt och framåtdrivande.
+
+Här är några förslag på hur vi kan utnyttja din energi idag, uppdelat i handlingskraftiga spår. Välj det som lockar dig mest, eller låt dig inspireras att skapa ditt eget!
+
+---
+
+### **Möjliga Uppdrag för Dagen:**
+
+**1. Spår 1: Den Strukturerade Starten – Få Ordning & Överblick**
+*   **Mål:** Skapa klarhet och minska framtida friktion.
+*   **Första Steg:**
+    *   **A. Digital Detox (15 min):** Gå igenom din inkorg. Radera skräp, svara på 2-3 snabba mejl, och flagga resten för senare. *Målet är inte att tömma, utan att minska bruset.*
+    *   **B. Skrivbords-Räddning (20 min):** Plocka bort allt som inte hör hemma på ditt skrivbord. Lägg saker på sin plats eller i en "att-hantera-hög" för senare. *Fokus är att skapa en ren arbetsyta.*
+    *   **C. Dagens To-Do (10 min):** Skriv ner 3-5 saker du *vill* åstadkomma idag. Prioritera en som känns mest tillfredsställande att bocka av.
+
+**2. Spår 2: Den Fysiska Frigörelsen – Rörelse & Miljöförbättring**
+*   **Mål:** Använda den fysiska energin för att förbättra din omgivning eller ditt välmående.
+*   **Första Steg:**
+    *   **A. Energi-Boost (30 min):** Ta en rask promenad, dansa till din favoritmusik, eller gör några snabba övningar. *Fokus är att röra på kroppen och syresätta hjärnan.*
+    *   **B. Ett Rum i Fokus (25 min):** Välj *ett* rum (t.ex. köket, sovrummet) och fokusera på att plocka undan 5-10 saker som ligger framme. *Målet är inte att städa hela rummet, utan att minska röran i ett specifikt område.*
+    *   **C. Den Lilla Fixen (15 min):** Identifiera en liten sak som irriterat dig (t.ex. en glödlampa som behöver bytas, en växt som behöver vattnas, en soppåse som behöver bäras ut). Gör den!
+
+**3. Spår 3: Den Kreativa Katalysatorn – Idéer & Framåtblick**
+*   **Mål:** Utnyttja energin för att tänka framåt och generera nya idéer.
+*   **Första Steg:**
+    *   **A. Brainstorming-Session (20 min):** Välj ett projekt, en dröm eller ett problem du funderar på. Skriv ner *alla* idéer som dyker upp, oavsett hur vilda de är. *Ingen censur, bara flöde.*
+    *   **B. Framtidsplanering (15 min):** Titta på din kalender för nästa vecka. Identifiera 1-2 saker du kan förbereda för redan nu (t.ex. boka ett möte, skriva en inköpslista, skicka ett snabbt mejl).
+    *   **C. Lär dig Något Nytt (10 min):** Titta på en kort dokumentär, läs en intressant artikel, eller lyssna på en inspirerande podcast. *Målet är att stimulera sinnet.*
+
+---
+
+**Välj ditt spår, välj ditt första steg, och låt oss rida på den här vågen! Kom ihåg, vi kan alltid justera och bryta ner det ytterligare om det känns för mycket. Vilket spår lockar dig mest just nu?**
+
+--- Scenario 2: Stress 9 ---
+Input: Allt är för mycket, jag orkar ingenting...
+Jeeves (Dr Phil): Åh, vännen. Det är helt förståeligt att det känns så nu, att allt är för mycket.
+
+Det är helt okej att inte orka någonting. Verkligen.
+
+Bara vara, precis som du är. Det räcker gott.
+
+--- Scenario 3: Stress 5 ---
+Input: Jag behöver städa köket men vet inte var jag ska börja.
+Jeeves (Task Mgr): Helt förståeligt! Att städa köket kan kännas överväldigande när man inte vet var man ska börja. Låt oss sänka tröskeln ordentligt och ta några löjligt små steg för att få igång momentum.
+
+Här är din plan:
+
+1.  **Hämta en soppåse.** (Bara hämta den, inget mer.)
+2.  **Gå runt i köket och samla ihop *en* sak som ska slängas och lägg den i påsen.** (Bara en enda sak!)
+3.  **Ta ut den fyllda soppåsen.**
+
+Hur känns det att börja med det?
+
+--- Test: Kreativ Väckarklocka (Stress 9) ---
+Output: God morgon, min kära vän. Jag känner av att det är en hel del på gång i dina tankar just nu, och det är helt förståeligt. Men vet du vad? Idag handlar det bara om att vara snäll mot dig själv.
+
+Ingen brådska, ingen press. Vi tar det *oerhört* lugnt, precis i din egen takt. Dagen har gott om utrymme för dig, det lovar jag.
+
+Det allra första vi kan tänka på, om det känns okej, är kanske bara att, ja, *bara* sträcka ut dig en smula i sängen. Känn efter hur kroppen mår. Inget mer. Bara det lilla.
+
+När du sedan känner att det är dags för nästa pyttelilla steg, så kanske vi bara sätter fötterna på golvet. Inget mer än så. Vi behöver inte ens tänka på kaffet än, om det känns för stort.
+
+Vi har ett möte lite senare på morgonen, men det är långt bort just nu. Allt vi behöver fokusera på är att ge dig själv en mjuk, varsam start. Jag är här för att stötta dig genom varje litet steg. Du är fantastisk, precis som du är.
+
+--- Test: Kreativ Väckarklocka (Stress 2) ---
+Output: God morgon, min kära vän! Hoppas du vilat dig precis så länge som du behövde, för en ny dag har varsamt slagit upp sina ögon. Och vet du vad? Jag känner en härlig lätthet i luften idag, en behaglig känsla av att dagen ligger öppen och inbjudande framför oss.
+
+Det finns ingen som helst brådska just nu. Låt oss bara ta ett djupt, lugnt andetag tillsammans. Kanske sträcka på oss lite, precis där du är, och känna hur kroppen vaknar i sin egen takt. Och när du känner dig redo, finns det en alldeles underbar kopp te eller kaffe som väntar på att få värma dig, eller kanske ett glas vatten för att varsamt väcka systemet. Inget mer än så behövs just nu.
+
+När du så småningom glider in i dagens takt, vill jag bara viska om några riktigt härliga inslag vi har att se fram emot. Visst, dagen bjuder på ett viktigt morgonmöte, som vi tar med lugn och finess. Men sedan, lite senare, har vi en riktigt fin stund inbokad: en lunch med en vän på Kaféet på hörnet! Tänk att bara få koppla av, prata om allt och inget, och helt glömma jobbet för en stund. Det låter som en ren njutning, eller hur?
+
+Och vet du, även om eftermiddagen bjuder på koncentrerad rapportskrivning, så avslutar vi dagen med ett energigivande gympass för benen. Tänk vilken skön känsla det kommer att vara att sträcka ut kroppen och känna sig stark och pigg efteråt!
+
+Så, ingen stress, ingen press. Vi tar ett steg i taget, med lätt hjärta och ett öppet sinne. Dagen är din, och jag är här för att stötta dig genom varje ögonblick. Allt kommer att bli alldeles utmärkt. Ta din tid, min vän.
+

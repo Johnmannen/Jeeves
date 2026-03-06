@@ -1,0 +1,178 @@
+# Implementation Plan Template — YAML Schema
+# This template defines the structure for all generated implementation plans.
+# V1 of any generated plan is ALWAYS immutable.
+
+plan:
+  project_name: "Jeeves ADHD-Butlern"
+  version: "V2"
+  created_at: "2026-02-28"
+  updated_at: "2026-02-28"
+  status: "APPROVED"
+  architect: "John Garp"
+  immutable: false
+
+  cost_summary:
+    total_estimated: "0 SEK"
+    free_alternatives_count: 5
+    requires_approval: false
+    gcp_fallback_needed: false
+
+milestones:
+  - id: "M1"
+    title: "Core Infrastructure & RAG Integration"
+    description: "Lägg grunden med RAG-databasen för Vibe & Tone, samt ADK State Management för kontextdelning mellan agenter."
+    priority: "CRITICAL"
+    status: "NOT_STARTED"
+    estimated_effort: "2 dagar"
+    dependencies: []
+    challenge_pattern: "Utforska om GoodMem ADK-integrationen kan köras helt lokalt eller ifall vi kör inbyggd tool_context.state för korttidsminne."
+    
+    tasks:
+      - id: "T1.1"
+        title: "Koppla RAG-databasen för Personlighet"
+        description: "Implementera anslutningen till 'Databas_Jeeves-ADHD_stöd' via API för att sätta Dr Phil's vibe."
+        status: "NOT_STARTED"
+        acceptance_criteria:
+          - "Agenten kan hämta definierad 'framtoning' från RAG."
+          - "Fallback finns om RAG är oåtkomlig."
+        cost:
+          estimated: "0 SEK"
+          free_alternative: "Gemini Free Tier / NotebookLM API"
+          requires_approval: false
+        steps:
+          - id: "S1.1.1"
+            action: "Koppla Gemini API Key"
+            details: "Använd nyckeln från Länkar.txt i miljövariabler."
+            file_or_location: ".env"
+            estimated_time: "15 min"
+            status: "NOT_STARTED"
+
+      - id: "T1.2"
+        title: "ADK State Management & Långtidsminne (GoodMem)"
+        description: "Istället för egen databas, använd Googles nya ADK `tool_context.state` för session-minne och GoodMem-integrationen för ihållande minne."
+        status: "NOT_STARTED"
+        acceptance_criteria:
+          - "Agenter kan läsa/skriva state direkt via `tool_context.state['user:stress_level']`."
+          - "GoodMem är konfigurerat för persistenta minnen ('Kom ihåg att...')."
+        cost:
+          estimated: "0 SEK"
+          free_alternative: "ADK State / GoodMem (Free tier)"
+          requires_approval: false
+        steps:
+          - id: "S1.2.1"
+            action: "Initiera ADK State Tools"
+            details: "Bygg in tool_context i agenternas anrop."
+            file_or_location: "src/agents/memory.py"
+            estimated_time: "2 timmar"
+            status: "NOT_STARTED"
+
+    section_test:
+      auto_test: true
+      auto_fix: true
+      test_strategy: "Verifiera RAG-läsning och att `tool_context.state` överlever mellan två olika agent-anrop i samma session."
+      notify_user: true
+
+  - id: "M2"
+    title: "Chief Context Officer (Routing Agent)"
+    description: "Bygg Huvudagenten ('Ansiktet utåt') som bedömer användarens input och delegerar internt."
+    priority: "CRITICAL"
+    status: "NOT_STARTED"
+    estimated_effort: "3 dagar"
+    dependencies: ["M1"]
+    challenge_pattern: "Håll Chief Agent otroligt lättviktig (snabb) — all tänkande kraft ska ligga i under-agenterna."
+    
+    tasks:
+      - id: "T2.1"
+        title: "Intent Recognition & Routing"
+        description: "Låt agenten bedöma om användaren behöver 'Dr Phil' (stöd) eller 'Task Manager' (struktur)."
+        status: "NOT_STARTED"
+        acceptance_criteria:
+          - "Korrekt routing vid 'Jag känner mig överväldigad' (Dr Phil)."
+          - "Korrekt routing vid 'Vad står på schemat' (Task Manager)."
+        cost:
+          estimated: "0 SEK"
+          free_alternative: "Gemini Flash"
+          requires_approval: false
+        steps:
+          - id: "S2.1.1"
+            action: "Bygg Routing Module"
+            details: "Definiera klassificerings-prompt för Huvudagenten."
+            file_or_location: "src/agents/chief.py"
+            estimated_time: "4 timmar"
+            status: "NOT_STARTED"
+
+    section_test:
+      auto_test: true
+      auto_fix: true
+      test_strategy: "Skicka 10 test-prompter och verifiera 90% korrekt routing till Rätt Sub-Agent."
+      notify_user: true
+
+  - id: "M3"
+    title: "Sub-Agenter (Dr Phil & Task Manager ADK)"
+    description: "Implementera de specialiserade agenterna, nu förstärkta med ADK Integrationer."
+    priority: "HIGH"
+    status: "NOT_STARTED"
+    estimated_effort: "4 dagar"
+    dependencies: ["M2"]
+    
+    tasks:
+      - id: "T3.1"
+        title: "Dr. Phil Light Agent"
+        description: "Psykologisk stödagent — MVP version"
+        status: "NOT_STARTED"
+        acceptance_criteria:
+          - "Hämtar ton från RAG (M1)."
+          - "Använder `tool_context.state` för att läsa in aktuell stress-nivå."
+        cost:
+          estimated: "0 SEK"
+          free_alternative: "Gemini"
+          requires_approval: false
+
+      - id: "T3.2"
+        title: "ADK Task/Calendar Agent (Notion / Asana)"
+        description: "Använd den officiella ADK-integrationen för att koppla Task-agenten direkt mot din existerande kalender eller Notion istället för Mock DB."
+        status: "NOT_STARTED"
+        acceptance_criteria:
+          - "Kan skapa och läsa faktiska tasks via ADK Tool integrations."
+        cost:
+          estimated: "0 SEK"
+          free_alternative: "ADK Notion Integrations / Gemini"
+          requires_approval: false
+
+    section_test:
+      auto_test: true
+      auto_fix: true
+      test_strategy: "Kör ett test-task-skapande anrop och verifiera 200 OK från tredjeparts-api (Notion/Asana)."
+      notify_user: true
+
+  - id: "M4"
+    title: "Mobil Anpassad UX/UI (Web App)"
+    description: "Minimum Viable Product gränssnitt, anpassat för mobiler (som en riktig app)."
+    priority: "MEDIUM"
+    status: "NOT_STARTED"
+    estimated_effort: "5 dagar"
+    dependencies: ["M3"]
+    
+    tasks:
+      - id: "T4.1"
+        title: "Chat Interface MVP"
+        description: "Avskalat och extremt responsivt chatgränssnitt."
+        status: "NOT_STARTED"
+        acceptance_criteria:
+          - "Mobile-first CSS (Inga onödiga intryck)."
+          - "Stöd för röstinmatning (viktigt för ADHD)."
+        cost:
+          estimated: "0 SEK"
+          free_alternative: "Vite + React (eller Vanilla JS)"
+          requires_approval: false
+
+    section_test:
+      auto_test: true
+      auto_fix: true
+      test_strategy: "Renderings-test på mobila viewports."
+      notify_user: true
+
+dev_log:
+  file: "JEEVES_DEV_LOG_2026-02-28.md"
+  auto_fix_entries: 0
+  test_entries: 0
